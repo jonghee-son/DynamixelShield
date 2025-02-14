@@ -31,6 +31,8 @@
 // https://www.arduino.cc/reference/en/language/functions/communication/serial/
 #if defined(ARDUINO_AVR_UNO) || defined(ARDUINO_AVR_MEGA2560) || defined(ARDUINO_SAM_DUE)
   #define DXL_SERIAL   Serial
+#elif defined(ARDUINO_OpenRB)
+  #define DXL_SERIAL   Serial3
 #else
   #define DXL_SERIAL   Serial1
 #endif
